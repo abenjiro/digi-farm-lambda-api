@@ -1,0 +1,39 @@
+{
+  "name": "digital-farm",
+  "version": "1.0.0",
+  "description": "modern tech farm",
+  "main": "build/handlers/farmer.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:ts": "tsc --watch",
+    "start:js": "nodemon",
+    "start": "concurrently npm:start:*"
+  },
+  "author": "Benjamin Acheampong",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.146",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.10",
+    "@typescript-eslint/parser": "^8.26.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ssm": "^3.714.0",
+    "@middy/core": "^6.0.0",
+    "@middy/http-error-handler": "^6.0.0",
+    "@middy/http-event-normalizer": "^6.0.0",
+    "@middy/http-header-normalizer": "^6.0.0",
+    "@middy/http-json-body-parser": "^6.0.0",
+    "@middy/http-router": "^6.0.0",
+    "@middy/validator": "^6.0.0",
+    "aws-lambda": "^1.0.7",
+    "dotenv": "^16.4.7",
+    "pg": "^8.13.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.5"
+  }
+}
