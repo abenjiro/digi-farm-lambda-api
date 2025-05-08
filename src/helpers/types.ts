@@ -12,6 +12,11 @@ export interface Routes<TEvent> {
     handler: LambdaHandler<TEvent, TResult>
 }
 
+// document request 
+export interface WeatherInterface {
+    user_id: number;
+}
+
 // Function to validate request body  
 export const validateRequestBody = (
     body: any,
