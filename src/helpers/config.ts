@@ -6,9 +6,9 @@ dotenv.config();
 export interface ConfigParameters{
     database:{
         host:string,
-        database:string,
         user:string,
-        password:string
+        password:string,
+        database:string,
     }
 }
 
@@ -51,7 +51,7 @@ export async function getAppParameter(name: string ):Promise<string>{
 }
 
   
-// 🔹 Fetch Configurations & Handle JSON Parsing
+// Fetch Configurations & Handle JSON Parsing
 async function loadConfiguration() {
   try {
     const configuration = await getAppParameter(process.env.APP_CONFIG_PARAMS ?? '');
